@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:noteapp/views/note_app_view.dart';
 
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
   runApp(const Notes_App());
 }
@@ -7,9 +9,14 @@ void main() {
 class Notes_App extends StatelessWidget {
   const Notes_App({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: NoteAppView(),
+    );
   }
 }
