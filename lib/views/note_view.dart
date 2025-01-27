@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:noteapp/contstant.dart';
+import 'package:noteapp/widgets/custom_show_model_bottom.dart';
 import 'package:noteapp/widgets/note_view_body.dart';
 
 class NoteAppView extends StatelessWidget {
@@ -6,8 +8,22 @@ class NoteAppView extends StatelessWidget {
   static String id = 'NopeAppView';
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Note_View_Body(),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: KPrimaryColor,
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return CustomShowModelBottom();
+              });
+        },
+        child: const Icon(
+          Icons.add,
+          color: Colors.black,
+        ),
+      ),
+      body: const Note_View_Body(),
     );
   }
 }
