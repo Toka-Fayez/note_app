@@ -15,7 +15,7 @@ class Custom_SearchButton extends StatelessWidget {
         color: const Color.fromARGB(10, 255, 255, 255),
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Icon(
+      child: const Icon(
         Icons.search,
         size: 30,
       ),
