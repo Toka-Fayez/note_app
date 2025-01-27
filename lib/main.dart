@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/views/note_app_view.dart';
+import 'package:noteapp/views/note_view.dart';
 
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() {
