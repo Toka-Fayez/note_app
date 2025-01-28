@@ -15,7 +15,7 @@ class NoteAppView extends StatelessWidget {
           showModalBottomSheet(
               context: context,
               builder: (context) {
-                return CustomShowModelBottom();
+                return const CustomShowModelBottom();
               });
         },
         child: const Icon(
@@ -23,7 +23,8 @@ class NoteAppView extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      body: const Note_View_Body(),
+ body: const Note_View_Body(),
+   
     );
   }
 }

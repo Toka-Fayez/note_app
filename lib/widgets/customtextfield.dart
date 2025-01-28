@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({required this.hint, this.maxLines = 1});
-  String hint;
-  int maxLines;
+ const CustomTextField({super.key, required this.hint, this.maxLines = 1});
+  final String hint;
+ final int maxLines;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -17,9 +17,10 @@ class CustomTextField extends StatelessWidget {
   }
 }
 
+// ignore: non_constant_identifier_names
 OutlineInputBorder Border() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(8),
-    borderSide: BorderSide(color: Colors.grey, width: 1),
+    borderSide: const BorderSide(color: Colors.grey, width: 1),
   );
 }

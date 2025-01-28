@@ -3,26 +3,28 @@ import 'package:noteapp/widgets/custom_search_button.dart';
 
 class Custom_Appbar extends StatelessWidget {
   const Custom_Appbar({
-    super.key,
+   required this.title,
+    super.key, required this.icon,
   });
-
+   final IconData icon; 
+  final String title;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
+    return  Padding(
+      padding: const EdgeInsets.only(
         top: 55,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Notes",
-            style: TextStyle(
+            title,
+            style: const TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
             ),
           ),
-          Custom_SearchButton()
+          Custom_SearchButton(myIcon: icon)
         ],
       ),
     );
