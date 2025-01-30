@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/contstant.dart';
+import 'package:noteapp/widgets/add_note_bottom_sheet.dart';
 import 'package:noteapp/widgets/custom_show_model_bottom.dart';
 import 'package:noteapp/widgets/note_view_body.dart';
 
@@ -15,7 +16,7 @@ class NoteAppView extends StatelessWidget {
           showModalBottomSheet(
               context: context,
               builder: (context) {
-                return const CustomShowModelBottom();
+                return const AddNoteBottomSheet();
               });
         },
         child: const Icon(

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:noteapp/widgets/add_note_bottom_sheet.dart';
+import 'package:noteapp/widgets/custom_show_model_bottom.dart';
 import 'package:noteapp/widgets/customtextfield.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -45,7 +46,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
           SizedBox(
             height: 32,
           ),
-          AddNoteBottomSheet(
+          CustomShowModelBottom(
             onTap: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
