@@ -10,7 +10,7 @@ class NoteAppView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: KPrimaryColor,
+        backgroundColor: kPrimaryColor,
         onPressed: () {
           showModalBottomSheet(
               context: context,
