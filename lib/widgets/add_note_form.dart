@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:noteapp/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:noteapp/cubits/add_note_cubit/add_note_state.dart';
 import 'package:noteapp/models/note_model.dart';
+import 'package:noteapp/widgets/color_list_view.dart';
 import 'package:noteapp/widgets/custom_show_model_bottom.dart';
 import 'package:noteapp/widgets/customtextfield.dart';
 
@@ -38,7 +39,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 tilte = value;
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
             CustomTextField(
@@ -48,9 +49,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
               hint: 'Contant',
               maxLines: 8,
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
+            const ColorListView(),
             BlocBuilder<AddNoteCubit, AddNoteState>(
               builder: (context, state) {
                 return CustomShowModelBottom(
@@ -73,7 +75,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 );
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
           ],
@@ -82,3 +84,4 @@ class _AddNoteFormState extends State<AddNoteForm> {
     );
   }
 }
+
