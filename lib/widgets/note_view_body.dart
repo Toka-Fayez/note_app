@@ -23,31 +23,19 @@ class _Note_View_BodyState extends State<Note_View_Body> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) {
-              return const EditNoteView();
-            },
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      child: Column(
+        children: [
+          Custom_Appbar(
+            title: 'notes',
+            icon: Icons.search,
           ),
-        );
-      },
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          children: [
-            Custom_Appbar(
-              title: 'notes',
-              icon: Icons.search,
-            ),
-            SizedBox(
-              height: 24,
-            ),
-            ListViewNote(),
-          ],
-        ),
+          SizedBox(
+            height: 24,
+          ),
+          ListViewNote(),
+        ],
       ),
     );
   }
