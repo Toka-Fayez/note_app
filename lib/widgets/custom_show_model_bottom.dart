@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/contstant.dart';
 
-
-
 class CustomShowModelBottom extends StatelessWidget {
-  const CustomShowModelBottom({super.key,this.onTap});
-final  void Function()? onTap;
+  const CustomShowModelBottom({super.key, this.onTap, this.isLoading = false});
+  final void Function()? onTap;
+  final bool isLoading;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -17,15 +16,23 @@ final  void Function()? onTap;
           color: kPrimaryColor,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: const Center(
-          child: Text(
-            "Add",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
+        child: Center(
+          child: isLoading
+              ? const SizedBox(
+                height: 45,
+                width: 45,
+               
+                child: CircularProgressIndicator(
+                  color: Colors.black,
+                ))
+              : const Text(
+                  "Add",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
         ),
       ),
     );
